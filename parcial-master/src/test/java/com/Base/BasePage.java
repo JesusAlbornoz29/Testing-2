@@ -22,7 +22,7 @@ public class BasePage {
 
     /** Método para configurar opciones del navegador
      */
-    protected void setup() {
+    public void setup() {
         driver.manage().window().maximize();
     }
 
@@ -36,7 +36,7 @@ public class BasePage {
 
     /** Método para cerrar el navegador web.
      */
-    protected void close() {
+    public void close() {
         driver.quit();
     }
 
