@@ -7,16 +7,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Page02 extends BasePage {
-    private By searchBox = By.className("search");
+    private By searchBox = By.name("search");
     private By searchBtn = By.cssSelector("button[type='button'].btn.btn-default.btn-lg i.fa.fa-search");
-//     private By validateSearch = By.className("categoria");
+    private By btnAddCart = By.cssSelector("div.button-group > button > i.fa.fa-shopping-cart");
 
-    /**
-     * Constructor de la página base.
-     *
-     * @param driver El controlador del navegador web.
-     * @param wait
-     */
+
+    /* Constructor de la página base. */
     public Page02(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
@@ -30,11 +26,8 @@ public class Page02 extends BasePage {
         this.click(searchBtn);
     }
 
-   /*
-
-        public String resultadoBusqueda() throws InterruptedException {
-        System.out.println("RESULTADO DE LA BUSQUEDA: " + this.getText(validateSearch));
-        return this.getText(validateSearch);
+    public void agregarEnCarrito() throws InterruptedException{
+        this.click(btnAddCart);
     }
-    */
 }
+
